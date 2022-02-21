@@ -1,0 +1,10 @@
+Zophia Data Academy
+Fundamentos de ingeniería de datos
+
+Ejercicios propuestos para prácticar conocimientos adquiridos en el curso
+Datos sintéticos de un negocio de préstamos
+
+Decidí utilizar Pyspark para resolver los ejercicios
+La solución original considera que el conjunto de datos se encuentra en 
+google cloud storage y que se tiene activado el servicio de clusters con dataproc,
+en la solución presentada se cambiaron las rutas de origen y destino de los archivos

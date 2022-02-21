@@ -1,0 +1,131 @@
+Zophia Data Academy
+Fundamentos de ingeniería de datos
+
+Ecommerce Ejercicio 1
+
+
+Crear las siguientes tablas:
+
+prestamos_bancos
+ |-- DIGITOS: string
+ |-- BANCO: string
+ 
+prestamos_destinatarios
+ |-- ID: integer
+ |-- NOMBRE: string
+ |-- DIRECCION: string
+ |-- CP: string
+ |-- FECHA_NACIMIENTO: string
+ |-- EMPLEO: string
+ |-- EMPLEADOR: string
+ |-- CORREO: string
+ |-- BANCO: integer
+ |-- PLAZA: integer
+ |-- CLABE: long
+ 
+prestamos_pagos
+ |-- FECHA: string
+ |-- CANTIDAD: double
+ |-- PRESTAMO: string
+ 
+prestamos_plaza
+ |-- DIGITOS: string
+ |-- PLAZA: string
+ 
+prestamos_solicitudes
+ |-- ID: long
+ |-- FECHA: string
+ |-- FECHA_IN: string
+ |-- FECHA_LIM: string
+ |-- MONTO: long
+ |-- PRODUCTO: string
+ |-- TAZA: double
+ |-- DESCRIPCION: float
+ |-- FECHA_PAGO: string
+ |-- SOLICITANTE: string
+ 
+prestamos_solicitudes_procesadas
+ |-- FECHA_APROBADO: string
+ |-- FECHA_SOLICITUD: string
+ |-- FECHA_LIMITE: string
+ |-- MONTO_SOLICITADO: double
+ |-- MONTO_APROBADO: double
+ |-- SOLICITUD_ID: long
+ |-- RESPUESTA: boolean
+ 
+
+Ejemplo de las tablas de salida en:
+ output/prestamos_bancos.csv
+ output/prestamos_destinatarios.csv
+ output/prestamos_pagos.csv
+ output/prestamos_plaza.csv
+ output/prestamos_solicitudes.csv
+ output/prestamos_solicitudes_procesadas.csv
+
+
+Descripción
+ Para poder comenzar a trabajar con el dataset es necesario el trabajo de
+ limpieza, las tablas bancos y plaza tiene caracteres que vuelven
+ complicado utilizarlas correctamente, genera esas tablas limpias.
+  
+Archivos fuente
+ prestamos_bancos.csv
+ prestamos_destinatarios.csv
+ prestamos_pagos.csv
+ prestamos_plaza.csv
+ prestamos_solicitudes.csv
+ prestamos_solicitudes_procesadas.csv
+ prestamos_bancos.parquet
+ prestamos_destinatarios.parquet
+ prestamos_pagos.parquet
+ prestamos_plaza.parquet
+ prestamos_solicitudes.parquet
+ prestamos_solicitudes_procesadas.parquet
+ 
+Procedimiento
+ "source_to_stage"
+ Tomar cada archivo fuente(csv) y enviarlo a la capa stage(parquet)
+ Para el archivo prestamos_plaza.csv, leer el archivo con codificación
+ cp850, y enviarlo a la capa stage(parquet).
+ 
+ "transformation_clean_tables"
+ Para la tabla prestamos_bancos:
+ Leer tabla(parquet)
+ Quitar comillas simples (')
+ Cambiar a mayúsculas el nombre de cada columna
+ Guardar la tabla en la capa curated(parquet)
+ 
+ Para la tabla prestamos_destinatarios:
+ Leer tabla(parquet)
+ Cambiar el tipo de dato
+ Cambiar a mayúsculas el nombre de cada columna
+ Quitar acentos
+ Quitar saltos de línea
+ Guardar la tabla en la capa curated(parquet)
+ 
+ Para la tabla prestamos_pagos:
+ Leer tabla(parquet)
+ Cambiar el tipo de dato
+ Cambiar a mayúsculas el nombre de cada columna
+ Quitar corchetes ([])
+ Guardar la tabla en la capa curated(parquet)
+ 
+ Para la tabla prestamos_plaza:
+ Leer tabla(parquet)
+ Quitar comillas simples (')
+ Cambiar a mayúsculas el nombre de cada columna
+ Quitar acentos
+ Guardar la tabla en la capa curated(parquet)
+ 
+ Para la tabla prestamos_solicitudes:
+ Leer tabla(parquet)
+ Cambiar a mayúsculas el nombre de cada columna
+ Cambiar el tipo de dato
+ Quitar acentos
+ Guardar la tabla en la capa curated(parquet)
+ 
+ Para la tabla prestamos_solicitudes_procesadas:
+ Leer tabla(parquet)
+ Cambiar a mayúsculas el nombre de cada columna
+ Cambiar el tipo de dato
+ Guardar la tabla en la capa curated(parquet)
