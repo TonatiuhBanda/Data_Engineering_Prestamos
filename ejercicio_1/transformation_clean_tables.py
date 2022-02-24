@@ -76,9 +76,29 @@ tabla_acentos = str.maketrans(letras_acento, letras_sin_acento)
 nombre_archivo = nombre_archivos[0]
 df_bancos = spark.read.format('parquet')                .load(dir_archivo+dir_complemento+nombre_archivo)
 
-for col_nombre in ['digitos', 'BANCO']:
-    df_bancos = df_bancos.withColumn(col_nombre, F.translate(col_nombre, "'", ""))
-    df_bancos = df_bancos.withColumnRenamed(col_nombre, col_nombre.upper())
+col_nombre = 'digitos'
+df_bancos = df_bancos.withColumn(col_nombre, F.translate(col_nombre, "'", ""))
+df_bancos = df_bancos.withColumnRenamed(col_nombre, col_nombre.upper())
+
+col_nombre = 'BANCO'
+df_bancos = df_bancos.withColumn(col_nombre, F.translate(col_nombre, "'", ""))
+
+diccionario_banco = {
+    'BAJ�O': 'BAJÍO',
+    'VALU�': 'VALUÉ',
+    '�NICA': 'ÚNICA',
+    'CONSULTOR�A': 'CONSULTORÍA'}
+for palabra in diccionario_banco.keys():
+    df_bancos = df_bancos.withColumn('BANCO', F.regexp_replace('BANCO',
+                                                               palabra,
+                                                               diccionario_banco[palabra]))
+
+df_bancos = df_bancos.withColumn(col_nombre,
+                                 F.translate(col_nombre,
+                                             letras_acento,
+                                             letras_sin_acento))
+
+df_bancos = df_bancos.withColumnRenamed(col_nombre, col_nombre.upper())
 
 
 # In[7]:

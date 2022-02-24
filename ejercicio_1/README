@@ -92,6 +92,7 @@ Procedimiento
  Para la tabla prestamos_bancos:
  Leer tabla(parquet)
  Quitar comillas simples (')
+ Cambiar palabras con símbolo no identificado
  Cambiar a mayúsculas el nombre de cada columna
  Guardar la tabla en la capa curated(parquet)
  
