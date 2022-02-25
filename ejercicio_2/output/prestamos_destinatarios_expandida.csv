@@ -1,0 +1,11 @@
+ID_SOLICITANTE,NOMBRE_SOLICITANTE,DIRECCION,ESTADO,CP,FECHA_NACIMIENTO,CORREO,ID_PLAZA,NOMBRE_PLAZA,ID_BANCO,NOMBRE_BANCO,CLABE
+0,Luz Leon,Diagonal Argelia 602 655San Caridad de la Montaña,BC,76193,1960-12-12,pablo10@gmail.com,396,Tepatitlan,147,BANKAOOL,25944813986
+1,Manuel Rocio Ceja Aparicio,"Circunvalacion Marruecos 330 Edif. 196 , Depto. 146Vieja Uzbekistan",GRO,06897-5791,1925-05-19,berriosnayeli@hotmail.com,542,Cuautla,608,VECTOR,19093888907
+2,Marcela Cadena Rangel,Andador Hernandes 372 Interior 379San Ines los bajos,BC,05806-3517,1924-09-26,munozmitzy@yahoo.com,934,Guadalupe,138,ABC CAPITAL,87990547637
+3,Martha Ceballos,"Prolongacion Coronado 828 Edif. 325 , Depto. 860Vieja Etiopia",SON,81755,1927-03-17,gerardo54@gmail.com,180,Atizapan,624,CONSULTORIA,27660668982
+4,Diana Arellano Briseño,"Ampliacion Norte Moreno 015 Edif. 884 , Depto. 914San Graciela los altos",GRO,20060-3948,1940-03-04,frendon@gmail.com,180,Atizapan,129,BARCLAYS,21562010138
+5,Arturo Cristian Zaragoza,Callejon Norte Pineda 652 240San Jos de la Montaña,COAH,71413-5809,2016-05-12,guillermina96@hotmail.com,68,Monclova,679,FND,58771335229
+6,Carlos Pamela Archuleta Pacheco,Circunvalacion Barbados 712 Interior 197San Jacinto de la Montaña,OAX,45170,1995-11-01,veramarco-antonio@gmail.com,78,Saltillo,622,OACTIN,27160835651
+7,Evelio Arias Cadena,Privada Norte Corona 617 Interior 305San Dulce Maria los altos,COAH,51897-4663,2000-04-18,waguirre@yahoo.com,960,Calera de V. Rosales,112,BMONEX,14884594723
+8,Mitzy Ramon Tejeda,Retorno Islandia 778 793San Delia los bajos,JAL,47924-3226,2000-10-29,camilo67@hotmail.com,180,Atizapan,141,VOLKSWAGEN,48415739464
+9,Perla Piña Vazquez,"Continuacion Norte Quezada 523 Edif. 818 , Depto. 756San Aurelio de la Montaña",MEX,74477,1995-12-12,ruben16@gmail.com,737,Choix,113,VE POR MAS,34537919895

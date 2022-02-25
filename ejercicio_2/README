@@ -1,0 +1,59 @@
+Zophia Data Academy
+Fundamentos de ingeniería de datos
+
+Ecommerce Ejercicio 2
+
+
+Crear las siguientes tablas:
+ 
+prestamos_destinatarios_expandida
+ |-- ID_SOLICITANTE: integer
+ |-- NOMBRE_SOLICITANTE: string
+ |-- DIRECCION: string
+ |-- ESTADO: string
+ |-- CP: string
+ |-- FECHA_NACIMIENTO: string
+ |-- CORREO: string
+ |-- ID_PLAZA: integer
+ |-- NOMBRE_PLAZA: string
+ |-- ID_BANCO: integer
+ |-- NOMBRE_BANCO: string
+ |-- CLABE: long
+ 
+
+Ejemplo de las tablas de salida en:
+ output/prestamos_destinatarios_expandida.csv
+
+Descripción
+ La información con las que se registraron los solicitantes de préstamos
+ también necesita limpieza, genera una tabla con la información limpia de
+ los destinatarios, a los nombres remover información como “Lic” “Dr” “Sra”,
+ obtener el estado de residencia, y el banco al cual pertenecen, así como
+ en nombre de la plaza en la que se solicitó el préstamo.
+  
+Archivos fuente
+ prestamos_destinatarios.parquet
+ prestamos_bancos.parquet
+ prestamos_plaza.parquet
+  
+Procedimiento
+ "transformation_destinatarios"
+ Para la tabla prestamos_destinatarios:
+ Leer tabla(parquet)
+ Conservar las columnas a utilizar
+ Limpiar los nombres
+ Extraer el estado de la dirección
+ 
+ Para la tabla prestamos_bancos:
+ Conservar las columnas a utilizar
+ Cambiar el tipo de dato
+ 
+ Para la tabla prestamos_plaza:
+ Conservar las columnas a utilizar
+ Cambiar el tipo de dato
+ Conserva sólo un nombre de plaza por id
+ 
+ Cruce de tablas
+ Conservar las columnas a utilizar
+ 
+ Guardar la tabla en la capa curated(parquet)
