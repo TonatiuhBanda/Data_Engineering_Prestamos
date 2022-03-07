@@ -223,3 +223,11 @@ df_destinatarios_p.show(n=2, vertical=True, truncate=False)
 nombre_archivo = 'prestamos_destinatarios_expandida.parquet'
 df_almacenamiento(dir_archivo, nombre_archivo, df_destinatarios_p)
 
+
+# ### Unpersist
+
+# In[19]:
+
+
+df_destinatarios_p.unpersist()
+
