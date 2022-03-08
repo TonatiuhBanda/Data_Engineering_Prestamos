@@ -1,0 +1,60 @@
+Zophia Data Academy
+Fundamentos de ingeniería de datos
+
+Ecommerce Ejercicio 3
+
+
+Crear las siguientes tablas:
+ 
+prestamos_solicitudes_expandida
+ |-- FECHA_APROBADO: date
+ |-- FECHA_SOLICITUD: date
+ |-- FECHA_LIMITE: date
+ |-- MONTO_SOLICITADO: integer
+ |-- MONTO_APROBADO: float
+ |-- SOLICITUD_ID: integer
+ |-- PRODUCTO: string
+ |-- TASA: float
+ |-- NOMBRE_SOLICITANTE: string
+ 
+
+Ejemplo de las tablas de salida en:
+ output/prestamos_solicitudes_expandida.csv
+ output/prestamos_pagos_formato.csv
+
+Descripción
+ Ahora procedemos a la limpieza de la tabla de solicitudes, genera una
+ tabla con la información limpia de los préstamos solicitados, recuerda
+ en los nombres remover información como “Lic” “Dr” “Sra”.
+  
+Archivos fuente
+ prestamos_solicitudes.parquet
+ prestamos_solicitudes_procesadas.parquet
+ prestamos_pagos.parquet
+
+  
+Procedimiento
+ "transformation_solicitudes"
+ Para la tabla prestamos_solicitudes:
+ Leer tabla(parquet)
+ Cambiar el tipo de dato
+ Limpiar los nombres
+ Conservar las columnas a utilizar
+ 
+ Para la tabla prestamos_solicitudes_procesadas:
+ Leer tabla(parquet)
+ Cambiar el tipo de dato
+ Conservar las columnas a utilizar
+ 
+ Cruce de tablas
+ Conservar las columnas a utilizar
+ 
+ Guardar la tabla en la capa curated(parquet)
+ 
+ 
+ "transformation_pagos"
+ Para la tabla prestamos_pagos:
+ Leer tabla(parquet)
+ Cambiar el tipo de dato
+ Conservar las columnas a utilizar
+ Guardar la tabla en la capa curated(parquet)
