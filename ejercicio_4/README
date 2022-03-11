@@ -1,0 +1,38 @@
+Zophia Data Academy
+Fundamentos de ingeniería de datos
+
+Ecommerce Ejercicio 4
+
+
+Crear la siguiente tabla:
+ 
+prestamos_productos_tasa
+ |-- PRODUCTO: string
+ |-- MINIMO: float
+ |-- MAXIMO: float
+ |-- PROMEDIO: double
+ 
+
+Ejemplo de las tablas de salida en:
+ output/prestamos_productos_tasa.csv
+ output/prestamos_productos_tasa.csv
+
+Descripción
+ Hay información que se necesita sacar a partir de las tablas que 
+ actualmente se tienen disponibles, te piden saber cuáles son los 
+ rangos en las tasas de interés que maneja cada producto.
+  
+Archivos fuente
+ prestamos_solicitudes.parquet
+
+  
+Procedimiento
+ "transformation_solicitudes_tasa"
+ Leer tabla(parquet)
+ Cambiar el tipo de dato
+ Conservar las columnas a utilizar
+ Agrupar por producto
+ Obtener el valor mínimo
+ Obtener el valor máximo
+ Obtener el valor promedio 
+ Guardar la tabla en la capa curated(parquet)
